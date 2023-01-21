@@ -1,4 +1,4 @@
-# Spring-Boot-3-Practice
+# spring-boot-3-practice
 * Spring Boot 3
 * Spring Framework 6
 * Java 17
@@ -33,16 +33,24 @@ export PATH=${GRAALVM_HOME}/bin:$PATH
 * switch expression
   * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L25-L38 
 
-# Build
-* 1
+# Build & Run
+* build jar
 ```bash
 ./gradlew build
+jar -jar libs/spring-boot-3-practice-0.0.1-SNAPSHOT.jar
 ```
-* 2
+* build native
 ```bash
 ./gradlew nativeCompile
+./spring-boot-3-practice
 ```
-* 2
+![](./images/jar-native.png)
+* build OCI image
 ```bash
 ./gradlew bootBuildImage
+docker run -d -p 8080:8080 spring-boot-3-practice:0.0.1-SNAPSHOT
 ```
+![](./images/oci-legacy.png)
+![](./images/oci-legacy-run.png)
+![](./images/oci-native.png)
+![](./images/oci-legacy-run.png)
