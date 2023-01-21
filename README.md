@@ -1,13 +1,12 @@
-# spring-boot-3-practice
-* Spring Boot 3
-* Spring Framework 6
-* Java 17
-* Kotlin 1.7
-* GraalVM 22
+# spring-boot-3-practice 🦄
+* [Spring Boot 3](https://spring.io/projects/spring-boot)
+* [Spring Framework 6](https://spring.io/projects/spring-framework)
+* [Java 17](https://docs.oracle.com/en/java/javase/17/)
+* [Kotlin 1.7](https://kotlinlang.org/docs/whatsnew1720.html)
+* [GraalVM 22](https://www.graalvm.org/release-notes/22_0/)
 
-# SDKMAN!
-* https://sdkman.io/
-* install Java 17, GraalVM 22
+# SDKMAN! https://sdkman.io/
+* 🧱 install Java 17, GraalVM 22
 ```bash
 sdk list java
 sdk install java $version
@@ -15,7 +14,7 @@ sdk install java $version
 ![](./images/sdkman1.png)
 ![](./images/sdkman2.png)
 ![](./images/sdkman3.png)
-* configure
+* ⚙️ configure
 ```bash
 export GRAALVM_HOME=<graalvm_directory>
 export PATH=${GRAALVM_HOME}/bin:$PATH
@@ -34,18 +33,18 @@ export PATH=${GRAALVM_HOME}/bin:$PATH
   * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L25-L38 
 
 # Build & Run
-* build jar
+* 🔨 build jar
 ```bash
 ./gradlew build
 jar -jar libs/spring-boot-3-practice-0.0.1-SNAPSHOT.jar
 ```
-* build native
+* 🔮 build native
 ```bash
 ./gradlew nativeCompile
 ./spring-boot-3-practice
 ```
 ![](./images/jar-native.png)
-* build OCI image
+* 🪞 build OCI image
 ```bash
 ./gradlew bootBuildImage
 docker run -d -p 8080:8080 spring-boot-3-practice:0.0.1-SNAPSHOT
