@@ -6,6 +6,7 @@ data class KMemberRequestDto(
 
     val name: String,
     val email: String,
+    val birth: Int,
 ) {
 
     fun toPo(): KMemberPo =
@@ -13,6 +14,7 @@ data class KMemberRequestDto(
             id = null,
             name = name,
             email = email,
+            birth = birth,
             createDate = Instant.now().toEpochMilli(),
         )
 }

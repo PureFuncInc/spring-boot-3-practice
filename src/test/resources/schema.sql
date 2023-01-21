@@ -4,6 +4,7 @@ create table if not exists jmember
     constraint jmember_id_pk primary key,
     name                 varchar(255),
     email                 varchar(255),
+    birth                 int,
     create_date          bigint
 );
 
@@ -13,5 +14,6 @@ create table if not exists kmember
     constraint kmember_id_pk primary key,
     name                 varchar(255),
     email                 varchar(255),
+    birth                 int,
     create_date          bigint
 );

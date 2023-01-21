@@ -4,5 +4,6 @@ data class KMemberResponseDto(
 
     val name: String,
     val email: String,
+    val chineseZodiac: KChineseZodiac,
     val createDate: String,
 )

@@ -4,10 +4,17 @@ import java.time.Instant;
 
 public record JMemberRequestDto(
         String name,
-        String email
+        String email,
+        Integer birth
 ) {
 
     public JMemberPo toPo() {
-        return new JMemberPo(null, name, email, Instant.now().toEpochMilli());
+        return new JMemberPo(
+                null,
+                name,
+                email,
+                birth,
+                Instant.now().toEpochMilli()
+        );
     }
 }

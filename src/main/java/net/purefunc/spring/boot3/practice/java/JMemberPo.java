@@ -1,7 +1,5 @@
 package net.purefunc.spring.boot3.practice.java;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -16,6 +14,7 @@ public record JMemberPo(
         Long id,
         String name,
         String email,
+        Integer birth,
         Long createDate
 ) {
 
@@ -23,6 +22,20 @@ public record JMemberPo(
         return new JMemberResponseDto(
                 name,
                 email,
+                switch (Math.abs((birth / 10000) - 2002) % 12) {
+                    case 0 -> JChineseZodiac.RAT;
+                    case 1 -> JChineseZodiac.OX;
+                    case 2 -> JChineseZodiac.TIGER;
+                    case 3 -> JChineseZodiac.RABBIT;
+                    case 4 -> JChineseZodiac.DRAGON;
+                    case 5 -> JChineseZodiac.SNAKE;
+                    case 6 -> JChineseZodiac.HORSE;
+                    case 7 -> JChineseZodiac.GOAT;
+                    case 8 -> JChineseZodiac.MONKEY;
+                    case 9 -> JChineseZodiac.ROOSTER;
+                    case 10 -> JChineseZodiac.DOG;
+                    default -> JChineseZodiac.PIG;
+                },
                 DateTimeFormatter.ISO_ZONED_DATE_TIME
                         .format(
                                 OffsetDateTime.ofInstant(
