@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: ide
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: ide
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: rootroot
