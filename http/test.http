@@ -13,15 +13,23 @@ GET http://localhost:8080/java/api/v1.0/members?email=qrtt1@purefunc.net
 Content-Type: application/json
 
 ###
+GET http://localhost:8080/java/api/v1.0/members:agg
+Content-Type: application/json
+
+###
 POST http://localhost:8080/kotlin/api/v1.0/members:register
 Content-Type: application/json
 
 {
   "name": "qrtt1",
-  "birth": 19880928,
+  "birth": 19990928,
   "email": "qrtt1@purefunc.net"
 }
 
 ###
 GET http://localhost:8080/kotlin/api/v1.0/members?email=qrtt1@purefunc.net
+Content-Type: application/json
+
+###
+GET http://localhost:8080/kotlin/api/v1.0/members:agg
 Content-Type: application/json

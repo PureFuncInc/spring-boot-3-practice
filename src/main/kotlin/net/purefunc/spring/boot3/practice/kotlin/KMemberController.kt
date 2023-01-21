@@ -2,6 +2,7 @@ package net.purefunc.spring.boot3.practice.kotlin
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.time.Duration
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.reactive.awaitFirst
 import kotlinx.coroutines.reactive.awaitFirstOrNull
 import org.springframework.data.redis.core.ReactiveStringRedisTemplate
@@ -56,4 +57,7 @@ class KMemberController(
                 .findByEmail(email)
                 ?.let { ResponseEntity.ok(it.toResponseDto()) }
             ?: ResponseEntity.notFound().build()
+
+    @GetMapping("/members:agg")
+    suspend fun getAgg(): List<KMemberVo> = kMemberDao.findAgg().toList()
 }

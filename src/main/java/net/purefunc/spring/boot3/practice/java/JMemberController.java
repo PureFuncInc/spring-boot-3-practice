@@ -3,6 +3,7 @@ package net.purefunc.spring.boot3.practice.java;
 import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
@@ -41,5 +42,10 @@ public class JMemberController {
                 .get(email)
                 .switchIfEmpty(jMemberDao.findByEmail(email).map(jsonUtil::write))
                 .map(v -> ResponseEntity.ok(jsonUtil.read(v, JMemberPo.class).toResponseDto()));
+    }
+
+    @GetMapping("/members:agg")
+    Flux<JMemberVo> getAgg() {
+        return jMemberDao.findAgg();
     }
 }

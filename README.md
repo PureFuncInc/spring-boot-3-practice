@@ -14,6 +14,7 @@ sdk install java $version
 ```
 ![](./images/sdkman1.png)
 ![](./images/sdkman2.png)
+![](./images/sdkman3.png)
 * configure
 ```bash
 export GRAALVM_HOME=<graalvm_directory>
@@ -26,7 +27,7 @@ export PATH=${GRAALVM_HOME}/bin:$PATH
 
 # Demo Features
 * records
-  * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L12
+  * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L12-L19
 * text block
   * 
 * switch expression
