@@ -26,7 +26,8 @@ export PATH=${GRAALVM_HOME}/bin:$PATH
 
 # Demo Features
 * records
-  * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L14 
+  * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L12
 * text block
   * 
-* switch expression, pattern matching
+* switch expression
+  * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L25-L38 

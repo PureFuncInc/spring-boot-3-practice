@@ -4,7 +4,6 @@ import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import kotlin.math.abs
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
@@ -23,7 +22,7 @@ data class KMemberPo(
         KMemberResponseDto(
             name = name,
             email = email,
-            chineseZodiac = when (abs((birth / 10000) - 2002) % 12) {
+            chineseZodiac = when (((birth / 10000) + 8) % 12) {
                 0 -> KChineseZodiac.RAT
                 1 -> KChineseZodiac.OX
                 2 -> KChineseZodiac.TIGER

@@ -22,7 +22,7 @@ public record JMemberPo(
         return new JMemberResponseDto(
                 name,
                 email,
-                switch (Math.abs((birth / 10000) - 2002) % 12) {
+                switch (((birth / 10000) + 8) % 12) {
                     case 0 -> JChineseZodiac.RAT;
                     case 1 -> JChineseZodiac.OX;
                     case 2 -> JChineseZodiac.TIGER;

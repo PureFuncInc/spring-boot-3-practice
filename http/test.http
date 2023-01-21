@@ -4,6 +4,7 @@ Content-Type: application/json
 
 {
   "name": "qrtt1",
+  "birth": 20000928,
   "email": "qrtt1@purefunc.net"
 }
 
@@ -17,6 +18,7 @@ Content-Type: application/json
 
 {
   "name": "qrtt1",
+  "birth": 19880928,
   "email": "qrtt1@purefunc.net"
 }
 
