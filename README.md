@@ -52,4 +52,4 @@ docker run -d -p 8080:8080 spring-boot-3-practice:0.0.1-SNAPSHOT
 ![](./images/oci-legacy.png)
 ![](./images/oci-legacy-run.png)
 ![](./images/oci-native.png)
-![](./images/oci-legacy-run.png)
+![](./images/oci-native-run.png)
