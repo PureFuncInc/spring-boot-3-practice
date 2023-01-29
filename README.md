@@ -20,11 +20,11 @@ export GRAALVM_HOME=<graalvm_directory>
 export PATH=${GRAALVM_HOME}/bin:$PATH
 ```
 
-# New Project
+# New Project 🎉
 ![](./images/newproject1.png)
 ![](./images/newproject2.png)
 
-# Demo Java New Features
+# Demo Java New Features ✨
 * record
   * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L12-L19
 * text block
@@ -32,7 +32,7 @@ export PATH=${GRAALVM_HOME}/bin:$PATH
 * switch expression
   * https://github.com/PureFuncInc/Spring-Boot-3-Practice/blob/main/src/main/java/net/purefunc/spring/boot3/practice/java/JMemberPo.java#L25-L38 
 
-# Build & Run
+# Build & Run 🚀
 * 🔨 build jar
 ```bash
 ./gradlew build
